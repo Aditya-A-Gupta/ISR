@@ -1,0 +1,130 @@
+/* General styles for the container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Two equal-width columns */
+  grid-template-rows: 1fr 1fr;     /* Two equal-height rows */
+  gap: 20px;                       /* Space between grid items */
+  width: 90%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  height: 100vh;                   /* Ensures the grid takes up full viewport height */
+}
+
+/* Top Left: SDG Icons in a 2x2 grid */
+.sdg-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  
+  grid-template-rows: repeat(2, 1fr);     
+  gap: 0px;                              
+  justify-content: center;                
+  align-items: center;                    
+  padding: 20px;                          
+}
+
+.sdg-icons-grid img {
+  width: 80px;
+  height: 80px;
+}
+
+.sdg1 {
+  margin-left: 35%;
+  margin-top: 20%;
+}
+
+.sdg2 {
+  margin-left: -20%;
+  margin-top: 20%;
+}
+
+.sdg5 {
+  margin-left: 35%;
+  margin-bottom: 20%;
+}
+
+.sdg10 {
+  margin-left: -20%;
+  margin-bottom: 20%;
+}
+
+/* Top Right: Social Equality Section */
+.social-equality {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-equality h2 {
+  font-size: 1.8rem;
+  color: #E8554E;
+}
+
+.social-equality p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Bottom Left: Research and Development Section */
+.research-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.research-section h2 {
+  font-size: 1.8rem;
+  color: #E8554E;
+}
+
+.research-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Bottom Right: Image Section */
+.image-section-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-section-right img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;  /* Single column layout for smaller screens */
+    grid-template-rows: auto;    /* Adjust rows as necessary */
+  }
+
+  .sdg-icons-grid {
+    grid-template-columns: repeat(2, 1fr); /* Still two columns for SDG icons */
+    justify-content: center;
+  }
+
+  .image-section-right img {
+    width: 100%;
+  }
+
+  .sdg-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    grid-template-rows: repeat(2, 1fr);     
+    gap: 20px;                              
+    justify-content: center;                
+    align-items: center;                    
+    padding: 20px;                          
+  }
+
+  .sdg-icons-grid img {
+    width: 80px;
+    height: 80px;
+  }
+}
